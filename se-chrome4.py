@@ -14,7 +14,7 @@ def main():
 
     browser = webdriver.Chrome()
     browser.get('https://2gis.ru/novosibirsk')
-    time.sleep(10)
+    browser.implicitly_wait(10)
     elem = browser.find_element(By.CLASS_NAME, '_1gvu1zk')  # Find the search box
     elem.send_keys(address + Keys.RETURN)
     s=input('Press Enter to continue...') 
